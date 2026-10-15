@@ -139,7 +139,7 @@ curl -s http://127.0.0.1:3080/ | grep -o 'dsh-netflow-dock' | head -1
 2. `dsh plugin --profile web remove dsh-netflow-dock`；
 3. 重启 `dsh web`。
 
-只想临时关掉、不想删包的话，在第 2 步的位置加一行即可（包、依赖都留着，删掉这行就恢复）：
+只想临时关掉、不想删包的话，在 profile 的 `cordis.patch.yml` 里加一条覆盖即可（包和依赖都留着，删掉这条就恢复）：
 
 ```yaml
 - id: netflow-dock
