@@ -1,0 +1,14 @@
+# 本包不分发 node_modules：lib/ 里已是可直接运行的纯 JS，无构建步骤。
+node_modules/
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# 编辑器 / 操作系统
+.DS_Store
+.idea/
+.vscode/
+*.swp

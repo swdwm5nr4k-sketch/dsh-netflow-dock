@@ -1,0 +1,45 @@
+{
+  "name": "dsh-netflow-dock",
+  "version": "1.0.0",
+  "description": "DSH 服务器上下行流量读数：宿主半边每秒采样 /proc/net/dev 并经精确 HTTP 路由提供 JSON，浏览器半边在输入框下方新增一行紧凑的实时速率。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "netflow",
+    "network",
+    "traffic",
+    "bandwidth",
+    "monitor"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1"
+  }
+}
